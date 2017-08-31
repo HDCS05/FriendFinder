@@ -1,0 +1,56 @@
+body {
+	background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+}
+
+.jumbotron {
+    background-color: transparent;
+    font-family: 'Kaushan Script', cursive;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.letterpmarker {
+	font-family: 'Permanent Marker', cursive;
+	color: white;
+	font-size: 2em;
+}
+
+.letterlobster {
+	font-family: 'Lobster', cursive;
+	text-align: center;
+	color: white;
+	font-size: 2em;
+}
+
+.jumbotron h1 {
+	font-size: 6em;
+}
+
+.jumbotron h2 {
+	font-size: 3em;
+}
+
+.doublef {
+	font-size: 2em;
+}
+
+.wcolor {
+	color: white;
+}
+
+a:link {
+    color: white; 
+}
+
+a:visited {
+    color: pink;
+}
+
+a:hover {
+    color: yellow;
+}
+
+a:active {
+    color: lime;
+}
