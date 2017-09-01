@@ -3,13 +3,24 @@
   "version": "1.0.0",
   "description": "Friend Finder Color Match Version",
   "main": "server.js",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.4",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HDCS05/FriendFinder.git"
+  },
   "author": "Hilton DCS",
   "license": "ISC",
-  "dependencies": {
-    "express": "^4.15.4"
-  }
+  "bugs": {
+    "url": "https://github.com/HDCS05/FriendFinder/issues"
+  },
+  "homepage": "https://github.com/HDCS05/FriendFinder#readme"
 }

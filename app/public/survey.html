@@ -2,7 +2,7 @@
 <html>
 	<head>
 
-		<title>Friend Finder</title>
+		<title>Friend Finder Survey</title>
 
 		<!-- Viewport -->
 		<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -20,11 +20,26 @@
   		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/9.8.1/css/bootstrap-slider.min.css">
 
 		<!-- Custom files -->
-  		<link rel="stylesheet" type="text/css" href="stylesurvey.css">
+  		<link rel="stylesheet" type="text/css" href="css/stylesurvey.css">
 
 	</head>
 
 	<body>
+
+		<div class="container-fluid">
+			<!-- Modal -->
+			<div class="modal fade" id="myModal" role="dialog">
+    			<div class="modal-dialog">
+      				<!-- Modal content-->
+      				<div class="modal-content">
+        				<div class="modal-header">
+          					<h4 class="modal-title"></h4>
+        				</div>
+        				<div class="modal-body"></div>
+      				</div>
+    			</div>
+  			</div>			
+		</div>
 
 		<div class="container-fluid">
 			<div class="row">
@@ -45,7 +60,7 @@
 							<div class="form-group">
 						   	<label class="col-md-2 control-label">Link to Picture</label>
 						   	<div class="col-md-9">
-						   		<input type="url" class="form-control" id="URLForm" placeholder="Url of Your Picture">
+						   		<input type="text" class="form-control" id="URLForm" placeholder="Link to Your Picture">
 						   	</div>
 					  		</div>
 							<br/>
@@ -100,7 +115,7 @@
 
 							</div>
 
-							<button type="submit" class="btn btn-danger btn-lg">Submit Answers</button>
+							<button id="SubmitA" type="submit" class="btn btn-danger btn-lg">Submit Answers</button>
 								
 						</form>
 						
@@ -109,7 +124,7 @@
 					<div class="row">
 						<div class="container-fluid text-center">
 							<a href="/api/friends">API Friends List</a> |
-							<a href="url">GitHub Repo</a>
+							<a href="https://github.com/HDCS05/FriendFinder">GitHub Repo</a>
 						</div>
 					</div>
 					<div class="row">
@@ -128,7 +143,7 @@
 		<!-- Call the Javascript code Bootstrap slider-->
 		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/9.8.1/bootstrap-slider.min.js"></script>		
 		<!-- Personal JavaScript -->
-		<script type="text/javascript" src="ffsurvey.js"></script>
+		<script type="text/javascript" src="javascript/ffsurvey.js"></script>
 
 	</body>
 

@@ -55,6 +55,18 @@ form label {
 	width: 75px;
 }
 
+.modal-header {
+	font-size: 3em;
+	text-align: center;
+	color: white;
+}
+
+.modal-body {
+	font-size: 2em;
+	color: darkblue;
+	text-align: justify;
+}
+
 #Slider1 .slider-selection {
 	background: blue;
 }
