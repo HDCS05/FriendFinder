@@ -14,6 +14,7 @@ body {
 	font-family: 'Permanent Marker', cursive;
 	color: white;
 	font-size: 2em;
+	
 }
 
 .letterlobster {
@@ -21,18 +22,22 @@ body {
 	text-align: center;
 	color: white;
 	font-size: 2em;
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
 .jumbotron h1 {
 	font-size: 6em;
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
 .jumbotron h2 {
 	font-size: 3em;
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
 .doublef {
 	font-size: 2em;
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
 .wcolor {

@@ -1,7 +1,7 @@
 
 var friendData = require("../data/friend");
-var vnamematch = ""
-var vimage = ""
+var vnamematch = "";
+var vimage = "";
 var ofriends = "";
 var ocurrfriend = "";
 
@@ -12,38 +12,33 @@ module.exports = function(app) {
   });
 
   app.post("/api/friends", function(req, res) {
-		friendData.push(req.body);
 		ofriends = friendData;
+		friendData.push(req.body);
 		ocurrfriend = req.body;
-		res.json(true);
-		//fColorMatch();
-		//console.log(req.body);
-		//res.json([vnamematch,vimage]);
+		fColorMatch();
+		res.json([true, vnamematch, vimage]);
   });
  
 };
 
 function fColorMatch() {
-	var vtotaldif = 0;
-	var vnum = 0;
-	//var ofriends = friendData;
 	var vnumcontrol = 0;
-	console.log(ofriends);
-	console.log(ocurrfriend);
-	for (var i = 0 in ofriends) {
+	for (var i = 0; i < (ofriends.length - 1); i++) {
+		var vtotaldif = 0;
+		var vnum = 0;
 		for (var j = 0; j < 10; j++ ) {
-			vnum = ocurrfriend.scores[j] - ofriends.scores[j];
+			vnum = ocurrfriend.scores[j] - ofriends[i].scores[j];
 			vtotaldif += Math.abs(vnum);
 		}
 		if (i == 0) {
 			vnumcontrol = vtotaldif;
-			vnamematch = ofriends.name;
-			vimage = ofriends.photo;
+			vnamematch = ofriends[i].name;
+			vimage = ofriends[i].photo;
 		}	else {
 				if (vtotaldif < vnumcontrol) {
 					vnumcontrol = vtotaldif;
-					vnamematch = ofriends.name;
-					vimage = ofriends.photo;	
+					vnamematch = ofriends[i].name;
+					vimage = ofriends[i].photo;	
 				}
 			}
 	}

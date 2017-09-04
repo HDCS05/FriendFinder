@@ -85,29 +85,33 @@ function fsendform() {
 				$("#color10").val()
 			]
 		};
-
-		//console.log(newFriend);
-
-
+		//Send the values to the server
 		$.post("/api/friends", newFriend, function(data) {
-
-			if (data) {
-			// 	alert("Yay! You did it");
-			// }
-
-				$(".modal-title").text("Yay! Your Color Match is "); // + data[0] );
-				$(".modal-title").css("background-color", "orange");
-				$(".modal-body").text("Coming soon");
-				//$('#myModal img').attr('src', data[1]);
+			if (data[0]) {
+				var vmessag = $(".modal-title").text("Yay! Your Color Match is\n" + data[1]);
+				vmessag.html(vmessag.html().replace(/\n/g,'<br/>'));
+				//$(".modal-title").text("Yay! Your Color Match is " + data[1]);
+				//$(".modal-title").css("background-color", "orange");
+				//$(".modal-body").text("Coming soon " + data[2]);
+				$('#myModal img').attr('src', data[2]);
 				$("#myModal").modal("show");
 			}
-			//Clear the form when submitting
+
+			//Clear the form
 			$("#NameForm").val("");
 			$("#URLForm").val("");
-
+			$("#color1").slider("setValue", 3);
+			$("#color2").slider("setValue", 3);
+			$("#color3").slider("setValue", 3);
+			$("#color4").slider("setValue", 3);
+			$("#color5").slider("setValue", 3);
+			$("#color6").slider("setValue", 3);
+			$("#color7").slider("setValue", 3);
+			$("#color8").slider("setValue", 3);
+			$("#color9").slider("setValue", 3);
+			$("#color10").slider("setValue", 3);
 		});
-
 
 	});
 
-}
+};
